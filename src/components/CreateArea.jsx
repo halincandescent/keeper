@@ -15,14 +15,17 @@ function CreateArea(props){
       ...prevValue,
       [name]: value
       
-      };
-    
+      };  
   });
   
   }
   
   function submitNote(event){
-   props.onAdd(note);      
+   props.onAdd(note);
+   setNote({
+    title:"",
+    content:""
+   });      
    event.preventDefault();
   }
   
